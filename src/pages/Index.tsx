@@ -15,9 +15,9 @@ const Index = () => {
         <Header />
       </div>
       
+      <About />
       <SocialLinks />
       <WritingPortfolio />
-      <About />
       
       {/* Footer */}
       <footer className="bg-black text-white py-12">
@@ -36,7 +36,7 @@ const Index = () => {
             Making quantum science accessible and fun for everyone
           </p>
           <p className="text-sm text-gray-500">
-            © 2024 Science with Serena. All rights reserved.
+            © 2025 Science with Serena. All rights reserved.
           </p>
         </div>
       </footer>

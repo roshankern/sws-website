@@ -54,15 +54,14 @@ const SocialLinks = () => {
               className="group relative block"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`${link.color} rounded-2xl p-8 text-white transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl`}>
+              <div className={`${link.color} rounded-lg p-8 text-white transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl`}>
                 <div className="flex flex-col items-center text-center">
                   <link.icon className="w-12 h-12 mb-4" />
-                  <h3 className="text-xl font-bold mb-2">{link.name}</h3>
-                  <p className="text-sm opacity-90">{link.description}</p>
+                  <h3 className="text-xl font-bold">{link.name}</h3>
                 </div>
                 
                 {/* Hover effect overlay */}
-                <div className="absolute inset-0 bg-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-white/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </a>
           ))}
