@@ -1,73 +1,29 @@
-# Welcome to your Lovable project
+# Science with Serena WebsiteA modern, responsive website for quantum science communication, making complex quantum concepts accessible and engaging for everyone.## Features- **Responsive Design**: Optimized for all devices and screen sizes- **Modern UI**: Built with React, TypeScript, and Tailwind CSS- **Interactive Elements**: Engaging animations and hover effects- **Social Integration**: Connect with all major platforms- **Writing Portfolio**: Showcase articles and publications## Development### Prerequisites- Node.js 18+ or Bun- npm, yarn, or bun package manager### Getting Started1. Clone the repository:```bashgit clone [repository-url]cd sws-website```2. Install dependencies:```bash# Using bun (recommended)bun install# Using npmnpm install# Using yarnyarn install```3. Start the development server:```bash# Using bunbun run dev# Using npmnpm run dev# Using yarnyarn dev```4. Open your browser and navigate to `http://localhost:8080`### Build for Production```bash# Using bunbun run build# Using npmnpm run build# Using yarnyarn build```## Tech Stack- **Framework**: React 18 with TypeScript- **Styling**: Tailwind CSS- **Icons**: Lucide React- **UI Components**: shadcn/ui- **Build Tool**: Vite- **Package Manager**: Bun
 
-## Project info
+## Project Structure
 
-**URL**: https://lovable.dev/projects/51791af2-1c3d-4adf-aa27-cccd6efe659d
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/51791af2-1c3d-4adf-aa27-cccd6efe659d) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   ├── Header.tsx      # Hero section
+│   ├── Navigation.tsx  # Main navigation
+│   ├── About.tsx       # About section
+│   ├── SocialLinks.tsx # Social media links
+│   └── WritingPortfolio.tsx # Writing showcase
+├── pages/              # Page components
+├── hooks/              # Custom React hooks
+└── lib/                # Utility functions
 ```
 
-**Edit a file directly in GitHub**
+## Contributing
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Make your changes and commit: `git commit -m 'Add new feature'`
+4. Push to the branch: `git push origin feature/new-feature`
+5. Submit a pull request
 
-**Use GitHub Codespaces**
+## License
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/51791af2-1c3d-4adf-aa27-cccd6efe659d) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is private and proprietary to Science with Serena.

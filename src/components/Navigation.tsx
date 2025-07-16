@@ -38,7 +38,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src="/lovable-uploads/bb6bb47c-17e6-43b2-b52e-9e540d98d148.png" 
+              src="/images/bb6bb47c-17e6-43b2-b52e-9e540d98d148.png" 
               alt="Science with Serena" 
               className="w-8 h-8"
             />

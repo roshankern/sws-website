@@ -39,7 +39,7 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/ba8eea36-a176-41f6-af05-a35d97496170.png" 
+                  src="/images/ba8eea36-a176-41f6-af05-a35d97496170.png" 
                   alt="Serena with quantum illustration" 
                   className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
                 />

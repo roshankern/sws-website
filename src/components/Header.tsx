@@ -14,7 +14,7 @@ const Header = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="float-animation mb-8">
           <img 
-            src="/lovable-uploads/bb6bb47c-17e6-43b2-b52e-9e540d98d148.png" 
+            src="/images/bb6bb47c-17e6-43b2-b52e-9e540d98d148.png" 
             alt="Science with Serena Logo" 
             className="w-32 h-32 mx-auto mb-6"
           />
