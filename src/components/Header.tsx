@@ -36,7 +36,7 @@ const Header = () => {
           ref={titleRef}
           className={`text-6xl md:text-8xl font-bold text-black mb-4 ${getAnimationClasses(titleVisible, 'fadeUp')}`}
         >
-          Science with <span className="text-orange-500">Serena</span>
+          Science With <span className="text-orange-500">Serena</span>
         </h1>
         
         <p 

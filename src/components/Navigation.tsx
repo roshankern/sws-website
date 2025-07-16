@@ -39,11 +39,11 @@ const Navigation = () => {
           <div className="flex items-center gap-3">
             <img 
               src="/images/kenny_no_bg.png" 
-              alt="Science with Serena" 
+              alt="Science With Serena" 
               className="w-8 h-8"
             />
             <span className="font-bold text-xl text-black">
-              Science with <span className="text-orange-500">Serena</span>
+              Science With <span className="text-orange-500">Serena</span>
             </span>
           </div>
 
