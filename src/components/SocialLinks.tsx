@@ -1,5 +1,6 @@
 import { SiSubstack, SiLinkedin, SiInstagram } from 'react-icons/si';
 import { FaMediumM } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import { useScrollAnimation, getAnimationClasses } from '@/hooks/use-scroll-animation';
 
 const SocialLinks = () => {
@@ -8,6 +9,20 @@ const SocialLinks = () => {
   const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation<HTMLDivElement>({ delay: 300 });
 
   const socialLinks = [
+    {
+      name: 'Email',
+      icon: MdEmail,
+      url: 'mailto:serena@sciencewithserena.com',
+      description: 'Get in touch',
+      color: 'bg-green-600 hover:bg-green-700'
+    },
+    {
+      name: 'LinkedIn',
+      icon: SiLinkedin,
+      url: 'https://www.linkedin.com/in/serenakp/',
+      description: 'Professional network',
+      color: 'bg-blue-600 hover:bg-blue-700'
+    },
     {
       name: 'Substack',
       icon: SiSubstack,
@@ -21,13 +36,6 @@ const SocialLinks = () => {
       url: 'https://medium.com/@sciencewithserena',
       description: 'In-depth articles',
       color: 'bg-black hover:bg-gray-800'
-    },
-    {
-      name: 'LinkedIn',
-      icon: SiLinkedin,
-      url: 'https://www.linkedin.com/in/serenakp/',
-      description: 'Professional network',
-      color: 'bg-blue-600 hover:bg-blue-700'
     },
     {
       name: 'Instagram',
@@ -59,7 +67,7 @@ const SocialLinks = () => {
         
         <div 
           ref={gridRef}
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto ${getAnimationClasses(gridVisible, 'fadeUp')}`}
+          className={`grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-6xl mx-auto ${getAnimationClasses(gridVisible, 'fadeUp')}`}
         >
           {socialLinks.map((link, index) => (
             <a
