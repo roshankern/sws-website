@@ -29,10 +29,6 @@ const Header = () => {
           <br />
           Bridging the gap between complex quantum concepts and curious minds.
         </p>
-        
-        <div className="inline-block px-8 py-3 bg-orange-500 text-white rounded-full text-lg font-semibold hover:bg-orange-600 transition-colors duration-300">
-          Quantum Communication Specialist
-        </div>
       </div>
     </header>
   );

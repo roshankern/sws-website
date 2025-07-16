@@ -1,34 +1,33 @@
-
-import React from 'react';
-import { Instagram, Linkedin, BookOpen, PenTool } from 'lucide-react';
+import { SiSubstack, SiLinkedin, SiInstagram } from 'react-icons/si';
+import { FaMediumM } from 'react-icons/fa';
 
 const SocialLinks = () => {
   const socialLinks = [
     {
       name: 'Substack',
-      icon: BookOpen,
-      url: '#',
+      icon: SiSubstack,
+      url: 'https://substack.com/@sciencewithserena',
       description: 'Weekly quantum insights',
       color: 'bg-orange-500 hover:bg-orange-600'
     },
     {
       name: 'Medium',
-      icon: PenTool,
-      url: '#',
+      icon: FaMediumM,
+      url: 'https://medium.com/@sciencewithserena',
       description: 'In-depth articles',
       color: 'bg-black hover:bg-gray-800'
     },
     {
       name: 'LinkedIn',
-      icon: Linkedin,
-      url: '#',
+      icon: SiLinkedin,
+      url: 'https://www.linkedin.com/in/serenakp/',
       description: 'Professional network',
       color: 'bg-blue-600 hover:bg-blue-700'
     },
     {
       name: 'Instagram',
-      icon: Instagram,
-      url: '#',
+      icon: SiInstagram,
+      url: 'https://www.instagram.com/science.with.serena/',
       description: 'Visual science stories',
       color: 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
     }

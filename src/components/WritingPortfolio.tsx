@@ -97,10 +97,10 @@ const WritingPortfolio = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            My <span className="text-orange-500">Writing</span>
+            Past <span className="text-orange-500">Writing</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            From technical papers to personal reflections on the quantum world
+            From technical papers to short stories
           </p>
         </div>
 

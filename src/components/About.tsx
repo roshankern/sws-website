@@ -92,19 +92,6 @@ const About = () => {
               ))}
             </div>
           </div>
-
-          {/* Call to Action */}
-          <div className="text-center bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-12 text-white">
-            <h3 className="text-3xl font-bold mb-4">
-              Ready to Explore the Quantum World?
-            </h3>
-            <p className="text-xl mb-8 opacity-90">
-              Join me on this incredible journey of discovery and wonder.
-            </p>
-            <button className="bg-white text-orange-500 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors duration-300">
-              Let's Connect
-            </button>
-          </div>
         </div>
       </div>
     </section>
