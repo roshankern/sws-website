@@ -60,16 +60,16 @@ const WritingPortfolio = () => {
       color: 'text-blue-500',
       articles: [
         {
-          title: 'Quantum State Visualization Diagrams',
-          url: '#'
+          title: 'Computational Methods for Stereochemical Determination of Trichothilone-B (Poster)',
+          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
         },
         {
-          title: 'Molecular Interaction Infographics',
-          url: '#'
+          title: 'Quantum Chirality (Presentation)',
+          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
         },
         {
-          title: 'Physics Concepts Animation Series',
-          url: '#'
+          title: 'Quantum Comics Illustrations',
+          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
         }
       ]
     },
@@ -79,16 +79,16 @@ const WritingPortfolio = () => {
       color: 'text-pink-500',
       articles: [
         {
-          title: 'My Journey from Physics PhD to Science Communication',
-          url: '#'
+          title: 'Kendrick Lamar’s Exploration of Desire, Repetition, and Society',
+          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
         },
         {
-          title: 'Finding Wonder in the Quantum World',
-          url: '#'
+          title: 'Building and Rebuilding: Comparing Democracy in Uruguay, Chile, and Costa Rica',
+          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
         },
         {
-          title: 'The Day I Understood Superposition',
-          url: '#'
+          title: 'Making Sense of the Human-Cat Bond: The Benefits of Training',
+          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
         }
       ]
     },
@@ -98,16 +98,12 @@ const WritingPortfolio = () => {
       color: 'text-purple-500',
       articles: [
         {
-          title: 'The Quantum Detective',
-          url: '#'
+          title: 'Anything Else?',
+          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
         },
         {
-          title: 'Conversations with Schrödinger\'s Cat',
-          url: '#'
-        },
-        {
-          title: 'Time Loops and Coffee Shops',
-          url: '#'
+          title: 'I See Myself on an Island',
+          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
         }
       ]
     }
