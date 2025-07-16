@@ -64,7 +64,7 @@ const About = () => {
           </div>
 
           {/* Mission Grid */}
-          <div className="mb-16">
+          <div className="">
             <h3 className="text-3xl font-bold text-center text-black mb-12">
               My <span className="text-orange-500">Mission</span>
             </h3>

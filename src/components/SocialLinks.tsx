@@ -50,6 +50,8 @@ const SocialLinks = () => {
             <a
               key={link.name}
               href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative block"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
