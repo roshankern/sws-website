@@ -21,12 +21,36 @@ const WritingPortfolio = () => {
           url: 'https://drive.google.com/file/d/1u74qdcgeNaGFdouZmgsImpJWxSudNO0M/view?usp=drive_link'
         },
         {
-          title: 'Error Correction in Quantum Systems',
+          title: 'Quantum Chirality: Resolving Quantum Mechanics with Physical Reality',
           url: '#'
         },
         {
-          title: 'Variational Quantum Algorithms: Current State and Future',
-          url: '#'
+          title: 'Simple Synthesis of 2,6-Dimesitylene iodide as Introductory Laboratory Experience for Undergraduates',
+          url: 'https://drive.google.com/file/d/1KcPSZzTpV8K6JzqvpcMqdIWKw4jriwVf/view?usp=sharing'
+        },
+        {
+          title: 'Convenient Pathways for Synthesis and Characterization of Ferrocene... for use in Transition Metal Complexes',
+          url: 'https://drive.google.com/file/d/1HoGUqfw72_rCj4dXAgEYpk7ysrgTUgnE/view?usp=sharing'
+        },
+        {
+          title: 'Excited State pKa* Estimation for 2-Napthol using Absorbance and Fluorescence Spectroscopy',
+          url: 'https://drive.google.com/file/d/1HoGUqfw72_rCj4dXAgEYpk7ysrgTUgnE/view?usp=sharing'
+        },
+        {
+          title: 'Diffusion Coefficient Determination of Potassium Ferricyanide and Ferrocyanide in Aqueous Solution of Potassium Chloride using Cyclic Voltammetry',
+          url: 'https://drive.google.com/file/d/1DFEynd_vhKL6kjcyX_vAIO44Gq6QW35N/view?usp=sharing'
+        },
+        {
+          title: 'Kinetic Analysis and Rate Constant Determiniation of Enzyme-Catalyzed Hydrolysis... using Absorbance Spectroscopy',
+          url: 'https://drive.google.com/file/d/1J4RoNRhdd2npr0x7REAWgA43ED5tRTGY/view?usp=sharing'
+        },
+        {
+          title: 'Ferricyanide Standard Reduction Potential Determination using Absorbance Spectroscopy and Electrochemistry',
+          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
+        },
+        {
+          title: 'Proton Affinity of α-aminobutyric acid Estimation using Kinetic Method with Ion Trap Mass Spectrometry',
+          url: 'https://drive.google.com/file/d/12np2pcrZBES0Kr7MlSwKOC30aCUJvC-n/view?usp=sharing'
         }
       ]
     },
