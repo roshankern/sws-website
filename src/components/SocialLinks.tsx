@@ -10,20 +10,6 @@ const SocialLinks = () => {
 
   const socialLinks = [
     {
-      name: 'Email',
-      icon: MdEmail,
-      url: 'mailto:serena@sciencewithserena.com',
-      description: 'Get in touch',
-      color: 'bg-green-600 hover:bg-green-700'
-    },
-    {
-      name: 'LinkedIn',
-      icon: SiLinkedin,
-      url: 'https://www.linkedin.com/in/serenakp/',
-      description: 'Professional network',
-      color: 'bg-blue-600 hover:bg-blue-700'
-    },
-    {
       name: 'Substack',
       icon: SiSubstack,
       url: 'https://substack.com/@sciencewithserena',
@@ -38,12 +24,26 @@ const SocialLinks = () => {
       color: 'bg-black hover:bg-gray-800'
     },
     {
+      name: 'LinkedIn',
+      icon: SiLinkedin,
+      url: 'https://www.linkedin.com/in/serenakp/',
+      description: 'Professional network',
+      color: 'bg-blue-600 hover:bg-blue-700'
+    },
+    {
       name: 'Instagram',
       icon: SiInstagram,
       url: 'https://www.instagram.com/science.with.serena/',
       description: 'Visual science stories',
       color: 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
-    }
+    },
+    {
+      name: 'Email',
+      icon: MdEmail,
+      url: 'mailto:serena@sciencewithserena.com',
+      description: 'Get in touch',
+      color: 'bg-green-600 hover:bg-green-700'
+    },
   ];
 
   return (
