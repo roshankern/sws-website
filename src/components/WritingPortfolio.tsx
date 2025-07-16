@@ -17,8 +17,8 @@ const WritingPortfolio = () => {
       color: 'text-orange-500',
       articles: [
         {
-          title: 'Quantum Entanglement Explained: A Comprehensive Guide',
-          url: '#'
+          title: 'Computational Method for Determining Stereocenters of Trichothilone-B',
+          url: 'https://drive.google.com/file/d/1u74qdcgeNaGFdouZmgsImpJWxSudNO0M/view?usp=drive_link'
         },
         {
           title: 'Error Correction in Quantum Systems',
@@ -149,9 +149,11 @@ const WritingPortfolio = () => {
               
               <a
                 href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-600 font-semibold transition-colors"
               >
-                Read More
+                Open
                 <ExternalLink className="w-4 h-4" />
               </a>
             </div>
