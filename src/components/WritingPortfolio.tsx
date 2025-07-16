@@ -18,79 +18,71 @@ const WritingPortfolio = () => {
       articles: [
         {
           title: 'Quantum Entanglement Explained: A Comprehensive Guide',
-          description: 'Breaking down the spooky action at a distance for researchers and enthusiasts.',
-          publication: 'Quantum Computing Today',
-          date: '2024',
           url: '#'
         },
         {
           title: 'Error Correction in Quantum Systems',
-          description: 'Deep dive into quantum error correction protocols and their implementations.',
-          publication: 'Nature Quantum Information',
-          date: '2024',
           url: '#'
         },
         {
           title: 'Variational Quantum Algorithms: Current State and Future',
-          description: 'Comprehensive review of VQAs and their applications in quantum chemistry.',
-          publication: 'Physical Review Applied',
-          date: '2023',
           url: '#'
         }
       ]
     },
-    essays: {
-      title: 'Essays & Commentary',
+    visuals: {
+      title: 'Science Visuals',
       icon: BookOpen,
-      color: 'text-black',
+      color: 'text-blue-500',
       articles: [
         {
-          title: 'The Poetry of Quantum Mechanics',
-          description: 'Exploring the beautiful intersection of science and art in quantum physics.',
-          publication: 'Medium',
-          date: '2024',
+          title: 'Quantum State Visualization Diagrams',
           url: '#'
         },
         {
-          title: 'Why Quantum Computing Matters to Everyone',
-          description: 'Making the case for quantum literacy in the digital age.',
-          publication: 'Substack',
-          date: '2024',
+          title: 'Molecular Interaction Infographics',
           url: '#'
         },
         {
-          title: 'The Ethics of Quantum Technology',
-          description: 'Discussing the moral implications of quantum computing advancement.',
-          publication: 'The Quantum Ethics Review',
-          date: '2023',
+          title: 'Physics Concepts Animation Series',
           url: '#'
         }
       ]
     },
     personal: {
-      title: 'Personal Stories',
+      title: 'Personal Writing',
       icon: Heart,
       color: 'text-pink-500',
       articles: [
         {
           title: 'My Journey from Physics PhD to Science Communication',
-          description: 'The personal story behind my passion for making science accessible.',
-          publication: 'Personal Blog',
-          date: '2024',
           url: '#'
         },
         {
           title: 'Finding Wonder in the Quantum World',
-          description: 'How quantum mechanics changed my perspective on reality and possibility.',
-          publication: 'Medium',
-          date: '2024',
           url: '#'
         },
         {
           title: 'The Day I Understood Superposition',
-          description: 'A personal reflection on that eureka moment we all chase.',
-          publication: 'Substack',
-          date: '2023',
+          url: '#'
+        }
+      ]
+    },
+    fiction: {
+      title: 'Short Fiction',
+      icon: BookOpen,
+      color: 'text-purple-500',
+      articles: [
+        {
+          title: 'The Quantum Detective',
+          url: '#'
+        },
+        {
+          title: 'Conversations with Schrödinger\'s Cat',
+          url: '#'
+        },
+        {
+          title: 'Time Loops and Coffee Shops',
           url: '#'
         }
       ]
@@ -151,20 +143,9 @@ const WritingPortfolio = () => {
               className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group"
               style={{ animationDelay: `${gridVisible ? index * 100 : 0}ms` }}
             >
-              <div className="flex items-start justify-between mb-4">
-                <span className="text-sm font-semibold text-orange-500 bg-orange-100 px-3 py-1 rounded-full">
-                  {article.publication}
-                </span>
-                <span className="text-sm text-gray-500">{article.date}</span>
-              </div>
-              
-              <h3 className="text-xl font-bold text-black mb-3 group-hover:text-orange-500 transition-colors">
+              <h3 className="text-xl font-bold text-black mb-4 group-hover:text-orange-500 transition-colors">
                 {article.title}
               </h3>
-              
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                {article.description}
-              </p>
               
               <a
                 href={article.url}
