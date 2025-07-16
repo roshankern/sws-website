@@ -22,7 +22,7 @@ const WritingPortfolio = () => {
         },
         {
           title: 'Quantum Chirality: Resolving Quantum Mechanics with Physical Reality',
-          url: '#'
+          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
         },
         {
           title: 'Simple Synthesis of 2,6-Dimesitylene iodide as Introductory Laboratory Experience for Undergraduates',
