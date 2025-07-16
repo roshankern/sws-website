@@ -16,9 +16,9 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
     { name: 'Connect', href: '#connect' },
     { name: 'Writing', href: '#writing' },
-    { name: 'About', href: '#about' }
   ];
 
   const scrollToSection = (href: string) => {
@@ -38,7 +38,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src="/images/bb6bb47c-17e6-43b2-b52e-9e540d98d148.png" 
+              src="/images/kenny_no_bg.png" 
               alt="Science with Serena" 
               className="w-8 h-8"
             />

@@ -1,7 +1,12 @@
 import { SiSubstack, SiLinkedin, SiInstagram } from 'react-icons/si';
 import { FaMediumM } from 'react-icons/fa';
+import { useScrollAnimation, getAnimationClasses } from '@/hooks/use-scroll-animation';
 
 const SocialLinks = () => {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation<HTMLElement>({ delay: 100 });
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLDivElement>({ delay: 200 });
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation<HTMLDivElement>({ delay: 300 });
+
   const socialLinks = [
     {
       name: 'Substack',
@@ -34,9 +39,16 @@ const SocialLinks = () => {
   ];
 
   return (
-    <section id="connect" className="py-20 bg-white">
+    <section 
+      id="connect" 
+      ref={sectionRef}
+      className={`py-20 bg-white ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
+    >
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center mb-16 ${getAnimationClasses(titleVisible, 'fadeUp')}`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Let's <span className="text-orange-500">Connect</span>
           </h2>
@@ -45,7 +57,10 @@ const SocialLinks = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div 
+          ref={gridRef}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto ${getAnimationClasses(gridVisible, 'fadeUp')}`}
+        >
           {socialLinks.map((link, index) => (
             <a
               key={link.name}
@@ -53,7 +68,7 @@ const SocialLinks = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="group relative block"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ animationDelay: `${gridVisible ? index * 100 : 0}ms` }}
             >
               <div className={`${link.color} rounded-lg p-8 text-white transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl`}>
                 <div className="flex flex-col items-center text-center">

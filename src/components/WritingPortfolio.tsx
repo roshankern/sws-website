@@ -1,9 +1,14 @@
 
 import React, { useState } from 'react';
 import { FileText, BookOpen, Heart, ExternalLink } from 'lucide-react';
+import { useScrollAnimation, getAnimationClasses } from '@/hooks/use-scroll-animation';
 
 const WritingPortfolio = () => {
   const [activeCategory, setActiveCategory] = useState('technical');
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation<HTMLElement>({ delay: 100 });
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLDivElement>({ delay: 200 });
+  const { ref: tabsRef, isVisible: tabsVisible } = useScrollAnimation<HTMLDivElement>({ delay: 300 });
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400 });
 
   const writingCategories = {
     technical: {
@@ -93,9 +98,16 @@ const WritingPortfolio = () => {
   };
 
   return (
-    <section id="writing" className="py-20">
+    <section 
+      id="writing" 
+      ref={sectionRef}
+      className={`py-20 ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
+    >
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center mb-16 ${getAnimationClasses(titleVisible, 'fadeUp')}`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Past <span className="text-orange-500">Writing</span>
           </h2>
@@ -105,7 +117,10 @@ const WritingPortfolio = () => {
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div 
+          ref={tabsRef}
+          className={`flex flex-wrap justify-center gap-4 mb-12 ${getAnimationClasses(tabsVisible, 'fadeUp')}`}
+        >
           {Object.entries(writingCategories).map(([key, category]) => {
             const IconComponent = category.icon;
             return (
@@ -126,11 +141,15 @@ const WritingPortfolio = () => {
         </div>
 
         {/* Articles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div 
+          ref={gridRef}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto ${getAnimationClasses(gridVisible, 'fadeUp')}`}
+        >
           {writingCategories[activeCategory as keyof typeof writingCategories].articles.map((article, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group"
+              style={{ animationDelay: `${gridVisible ? index * 100 : 0}ms` }}
             >
               <div className="flex items-start justify-between mb-4">
                 <span className="text-sm font-semibold text-orange-500 bg-orange-100 px-3 py-1 rounded-full">
