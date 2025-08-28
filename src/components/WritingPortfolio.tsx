@@ -89,14 +89,7 @@ const WritingPortfolio = () => {
         {
           title: 'Making Sense of the Human-Cat Bond: The Benefits of Training',
           url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
-        }
-      ]
-    },
-    fiction: {
-      title: 'Short Fiction',
-      icon: BookOpen,
-      color: 'text-purple-500',
-      articles: [
+        },
         {
           title: 'Anything Else?',
           url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
@@ -118,7 +111,7 @@ const WritingPortfolio = () => {
       <div className="container mx-auto px-6">
         <div 
           ref={titleRef}
-          className={`text-center mb-16 ${getAnimationClasses(titleVisible, 'fadeUp')}`}
+          className={`text-center mb-10 ${getAnimationClasses(titleVisible, 'fadeUp')}`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Past <span className="text-orange-500">Writing</span>

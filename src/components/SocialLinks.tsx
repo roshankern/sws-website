@@ -54,7 +54,7 @@ const SocialLinks = () => {
       <div className="container mx-auto px-6">
         <div 
           ref={titleRef}
-          className={`text-center mb-16 ${getAnimationClasses(titleVisible, 'fadeUp')}`}
+          className={`text-center mb-10 ${getAnimationClasses(titleVisible, 'fadeUp')}`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Let's <span className="text-orange-500">Connect</span>
