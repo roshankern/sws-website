@@ -22,7 +22,7 @@ const WritingPortfolio = () => {
         },
         {
           title: 'Quantum Chirality: Resolving Quantum Mechanics with Physical Reality',
-          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
+          url: 'https://drive.google.com/file/d/1GEhqlGARYvdSQFFt8YHtFuAVP1xsyLeF/view?usp=drive_link'
         },
         {
           title: 'Simple Synthesis of 2,6-Dimesitylene iodide as Introductory Laboratory Experience for Undergraduates',
@@ -34,7 +34,7 @@ const WritingPortfolio = () => {
         },
         {
           title: 'Excited State pKa* Estimation for 2-Napthol using Absorbance and Fluorescence Spectroscopy',
-          url: 'https://drive.google.com/file/d/1HoGUqfw72_rCj4dXAgEYpk7ysrgTUgnE/view?usp=sharing'
+          url: 'https://drive.google.com/file/d/1GGPvpkUw95_BYCmiTDQX0URXJCdRBiNw/view?usp=drive_link'
         },
         {
           title: 'Diffusion Coefficient Determination of Potassium Ferricyanide and Ferrocyanide in Aqueous Solution of Potassium Chloride using Cyclic Voltammetry',
@@ -61,16 +61,15 @@ const WritingPortfolio = () => {
       articles: [
         {
           title: 'Computational Methods for Stereochemical Determination of Trichothilone-B (Poster)',
-          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
+          url: 'https://drive.google.com/file/d/1rQmKkWVKfuYpv9ZsioQSN32k01xF4ixt/view?usp=drive_link'
         },
-        {
-          title: 'Quantum Chirality (Presentation)',
-          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
-        },
+        // Removed "Quantum Chirality (Presentation)" per your request
         {
           title: 'Quantum Comics Illustrations',
           url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
         }
+        // Placeholder for IQY visuals if allowed:
+        // { title: 'International Year of Quantum Visuals', url: '...' }
       ]
     },
     personal: {
@@ -80,19 +79,19 @@ const WritingPortfolio = () => {
       articles: [
         {
           title: 'Kendrick Lamar’s Exploration of Desire, Repetition, and Society',
-          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
+          url: 'https://drive.google.com/file/d/1LPhvjnppwcL8eQdGHyEhwTbNS0Hcs1nO/view?usp=drive_link'
         },
         {
           title: 'Building and Rebuilding: Comparing Democracy in Uruguay, Chile, and Costa Rica',
-          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
+          url: 'https://drive.google.com/file/d/1vwMgFhQxfOy-qXqjny4W-TW9DMqNrSVk/view?usp=drive_link'
         },
         {
           title: 'Making Sense of the Human-Cat Bond: The Benefits of Training',
-          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
+          url: 'https://drive.google.com/file/d/1weXuu7hz85tXeGvd7yjiotPY1yPtO2q_/view?usp=drive_link'
         },
         {
           title: 'Anything Else?',
-          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
+          url: 'https://drive.google.com/file/d/1XQ6ej-wvLpilu-mZw0wnpvlE1_ayB58G/view?usp=drive_link'
         },
         {
           title: 'I See Myself on an Island',
