@@ -33,12 +33,10 @@ const About = () => {
                 <div className="lg:col-span-2 flex justify-center">
                   <div className="relative">
                     <img 
-                      src="/images/ba8eea36-a176-41f6-af05-a35d97496170.png" 
+                      src="/images/serena.jpg" 
                       alt="Serena with quantum illustration" 
                       className="w-full max-w-md rounded-2xl shadow-2xl"
                     />
-                    <div className="absolute -top-4 -right-4 w-24 h-24 bg-orange-500 rounded-full opacity-20 animate-pulse"></div>
-                    <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-orange-300 rounded-full opacity-30 animate-pulse" style={{animationDelay: '1s'}}></div>
                   </div>
                 </div>
                 
