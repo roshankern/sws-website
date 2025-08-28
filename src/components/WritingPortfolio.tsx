@@ -93,10 +93,6 @@ const WritingPortfolio = () => {
           title: 'Anything Else?',
           url: 'https://drive.google.com/file/d/1XQ6ej-wvLpilu-mZw0wnpvlE1_ayB58G/view?usp=drive_link'
         },
-        {
-          title: 'I See Myself on an Island',
-          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
-        }
       ]
     }
   };
