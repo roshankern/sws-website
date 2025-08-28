@@ -39,7 +39,7 @@ const Mission = () => {
         <div className="max-w-6xl mx-auto">
           <h2 
             ref={titleRef}
-            className={`text-4xl md:text-5xl font-bold text-center text-black mb-16 ${getAnimationClasses(titleVisible, 'fadeUp')}`}
+            className={`text-4xl md:text-5xl font-bold text-center text-black mb-10 ${getAnimationClasses(titleVisible, 'fadeUp')}`}
           >
             My <span className="text-orange-500">Mission</span>
           </h2>

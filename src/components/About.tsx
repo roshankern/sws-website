@@ -18,7 +18,7 @@ const About = () => {
           <div className="text-center">
             <h2 
               ref={titleRef}
-              className={`text-4xl md:text-5xl font-bold text-black ${getAnimationClasses(titleVisible, 'fadeUp')}`}
+              className={`text-4xl md:text-5xl mb-10 font-bold text-black ${getAnimationClasses(titleVisible, 'fadeUp')}`}
             >
               About <span className="text-orange-500">Serena</span>
             </h2>
@@ -52,10 +52,6 @@ const About = () => {
 
                 <p className="text-lg text-gray-700 leading-relaxed">
                   I started Science with Serena because I wanted a breath of fresh science. Endless jargon, dense papers and muddled communication makes academia feel so stuffy. At the last quantum conference I attended I was listening to groundbreaking science thinking about when the next snack break would be. I love Quantum science, but I wanted to engage with it in a way that felt human. 
-                </p>
-
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  So I created a platform where I could put all the fun into science that I wanted. My newsletter the Quantum Notebook uses comics and cartoons to visualize complex science topics in a way that is approachable for everybody. My social networks give the behind the scenes look into my masters studies. 
                 </p>
 
                 <p className="text-lg text-gray-700 leading-relaxed">
