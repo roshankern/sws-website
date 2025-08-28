@@ -91,7 +91,7 @@ const WritingPortfolio = () => {
         // Removed "Quantum Chirality (Presentation)" per your request
         {
           title: 'Quantum Comics Illustrations',
-          url: 'https://drive.google.com/file/d/1KD9LsfZRntkW2ITBdpkwYDv6D2YD3_v8/view?usp=sharing'
+          url: 'https://drive.google.com/file/d/1lM7CFIOa_fQQGLpFXcmMTo1jTy3KOoZz/view?usp=drive_link'
         }
         // Placeholder for IQY visuals if allowed:
         // { title: 'International Year of Quantum Visuals', url: '...' }
