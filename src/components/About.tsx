@@ -72,7 +72,7 @@ const About = () => {
 
                 {/* Kenny Circle */}
                 <a
-                  href="#"
+                  href="/kenny"
                   className="w-16 h-16 bg-transparent border-2 border-black rounded-full flex items-center justify-center hover:bg-gray-100 transition-all duration-300 transform hover:scale-110 hover:shadow-xl"
                   aria-label="Kenny"
                 >
