@@ -8,6 +8,7 @@ const Testimonials = () => {
   const { ref: carouselRef, isVisible: carouselVisible } = useScrollAnimation<HTMLDivElement>({ delay: 300 });
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const testimonials = [
     {
@@ -63,25 +64,36 @@ const Testimonials = () => {
   // Auto-rotate carousel every 10 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-      );
+      if (!isTransitioning) {
+        const newIndex = currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1;
+        changeIndex(newIndex);
+      }
     }, 10000);
 
     return () => clearInterval(interval);
-  }, [testimonials.length]);
+  }, [testimonials.length, currentIndex, isTransitioning]);
 
-  // Navigation functions
+  // Navigation functions with fade transition
+  const changeIndex = (newIndex: number) => {
+    if (isTransitioning) return;
+    
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex(newIndex);
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 50);
+    }, 250);
+  };
+
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
+    const newIndex = currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1;
+    changeIndex(newIndex);
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
+    const newIndex = currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1;
+    changeIndex(newIndex);
   };
 
   // Calculate how many testimonials to show based on screen size
@@ -137,7 +149,9 @@ const Testimonials = () => {
               {getVisibleTestimonials(1).map((testimonial, index) => (
                 <div
                   key={`${currentIndex}-${index}`}
-                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 ${
+                    isTransitioning ? 'opacity-0' : 'opacity-100'
+                  }`}
                   style={{ animationDelay: `${carouselVisible ? index * 100 : 0}ms` }}
                 >
                   <div className="flex flex-col h-full">
@@ -180,7 +194,9 @@ const Testimonials = () => {
               {getVisibleTestimonials(2).map((testimonial, index) => (
                 <div
                   key={`${currentIndex}-${index}`}
-                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 ${
+                    isTransitioning ? 'opacity-0' : 'opacity-100'
+                  }`}
                   style={{ animationDelay: `${carouselVisible ? index * 100 : 0}ms` }}
                 >
                   <div className="flex flex-col h-full">
@@ -223,7 +239,9 @@ const Testimonials = () => {
             {getVisibleTestimonials(3).map((testimonial, index) => (
               <div
                 key={`${currentIndex}-${index}`}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 ${
+                  isTransitioning ? 'opacity-0' : 'opacity-100'
+                }`}
                 style={{ animationDelay: `${carouselVisible ? index * 100 : 0}ms` }}
               >
                 <div className="flex flex-col h-full">
@@ -265,7 +283,7 @@ const Testimonials = () => {
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentIndex(index)}
+                onClick={() => changeIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex 
                     ? 'bg-orange-500 scale-125' 
