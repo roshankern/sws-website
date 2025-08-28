@@ -1,14 +1,39 @@
 
 import React, { useState } from 'react';
-import { FileText, BookOpen, Heart, ExternalLink } from 'lucide-react';
+import { FileText, BookOpen, Heart, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 import { useScrollAnimation, getAnimationClasses } from '@/hooks/use-scroll-animation';
 
 const WritingPortfolio = () => {
   const [activeCategory, setActiveCategory] = useState('technical');
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation<HTMLElement>({ delay: 100 });
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLDivElement>({ delay: 200 });
   const { ref: tabsRef, isVisible: tabsVisible } = useScrollAnimation<HTMLDivElement>({ delay: 300 });
   const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400 });
+
+  // Function to get items per row based on screen size
+  const getItemsPerRow = () => {
+    // lg: 3 columns, md: 2 columns, mobile: 1 column
+    return { mobile: 1, md: 2, lg: 3 };
+  };
+
+  // Function to get visible articles based on expansion state
+  const getVisibleArticles = (articles: any[]) => {
+    const isExpanded = expandedCategories[activeCategory];
+    if (isExpanded) return articles;
+    
+    // Show only first row (3 items on lg, 2 on md, 1 on mobile)
+    // We'll use lg breakpoint as default (3 items)
+    return articles.slice(0, 3);
+  };
+
+  // Toggle expansion for current category
+  const toggleExpansion = () => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [activeCategory]: !prev[activeCategory]
+    }));
+  };
 
   const writingCategories = {
     technical: {
@@ -109,10 +134,10 @@ const WritingPortfolio = () => {
           className={`text-center mb-10 ${getAnimationClasses(titleVisible, 'fadeUp')}`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Past <span className="text-orange-500">Writing</span>
+            Past <span className="text-orange-500">Content</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            From technical papers to short stories
+            From technical papers to scientific illustrations
           </p>
         </div>
 
@@ -126,7 +151,14 @@ const WritingPortfolio = () => {
             return (
               <button
                 key={key}
-                onClick={() => setActiveCategory(key)}
+                onClick={() => {
+                  setActiveCategory(key);
+                  // Reset expansion state when switching categories
+                  setExpandedCategories(prev => ({
+                    ...prev,
+                    [key]: false
+                  }));
+                }}
                 className={`flex items-center gap-3 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   activeCategory === key
                     ? 'bg-orange-500 text-white shadow-lg'
@@ -143,29 +175,53 @@ const WritingPortfolio = () => {
         {/* Articles Grid */}
         <div 
           ref={gridRef}
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto ${getAnimationClasses(gridVisible, 'fadeUp')}`}
+          className={`max-w-7xl mx-auto ${getAnimationClasses(gridVisible, 'fadeUp')}`}
         >
-          {writingCategories[activeCategory as keyof typeof writingCategories].articles.map((article, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group"
-              style={{ animationDelay: `${gridVisible ? index * 100 : 0}ms` }}
-            >
-              <h3 className="text-xl font-bold text-black mb-4 group-hover:text-orange-500 transition-colors">
-                {article.title}
-              </h3>
-              
-              <a
-                href={article.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-600 font-semibold transition-colors"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {getVisibleArticles(writingCategories[activeCategory as keyof typeof writingCategories].articles).map((article, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group"
+                style={{ animationDelay: `${gridVisible ? index * 100 : 0}ms` }}
               >
-                Open
-                <ExternalLink className="w-4 h-4" />
-              </a>
+                <h3 className="text-xl font-bold text-black mb-4 group-hover:text-orange-500 transition-colors">
+                  {article.title}
+                </h3>
+                
+                <a
+                  href={article.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-600 font-semibold transition-colors"
+                >
+                  Open
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            ))}
+          </div>
+          
+          {/* Expand/Collapse Button */}
+          {writingCategories[activeCategory as keyof typeof writingCategories].articles.length > 3 && (
+            <div className="flex justify-center mt-8">
+              <button
+                onClick={toggleExpansion}
+                className="flex items-center gap-2 px-6 py-3 bg-white text-orange-500 border-2 border-orange-500 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                {expandedCategories[activeCategory] ? (
+                  <>
+                    Show Less
+                    <ChevronUp className="w-5 h-5" />
+                  </>
+                ) : (
+                  <>
+                    Show More
+                    <ChevronDown className="w-5 h-5" />
+                  </>
+                )}
+              </button>
             </div>
-          ))}
+          )}
         </div>
       </div>
     </section>
