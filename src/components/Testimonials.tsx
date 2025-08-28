@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useScrollAnimation, getAnimationClasses } from '@/hooks/use-scroll-animation';
 
 const Testimonials = () => {
@@ -60,22 +60,34 @@ const Testimonials = () => {
     }
   ];
 
-  // Auto-rotate carousel every 20 seconds
+  // Auto-rotate carousel every 10 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => 
         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
       );
-    }, 20000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
+  // Navigation functions
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   // Calculate how many testimonials to show based on screen size
-  const getVisibleTestimonials = () => {
-    // Show 1 on mobile, 2 on tablet, 3 on desktop
-    return testimonials.slice(currentIndex, currentIndex + 3).concat(
-      testimonials.slice(0, Math.max(0, (currentIndex + 3) - testimonials.length))
+  const getVisibleTestimonials = (count: number) => {
+    return testimonials.slice(currentIndex, currentIndex + count).concat(
+      testimonials.slice(0, Math.max(0, (currentIndex + count) - testimonials.length))
     );
   };
 
@@ -93,12 +105,122 @@ const Testimonials = () => {
           What People <span className="text-orange-500">Say</span>
         </h2>
         
-        <div 
-          ref={carouselRef}
-          className={`max-w-7xl mx-auto ${getAnimationClasses(carouselVisible, 'fadeUp')}`}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {getVisibleTestimonials().map((testimonial, index) => (
+        {/* Carousel container with chevrons */}
+        <div className="relative px-12 md:px-16">
+          {/* Left chevron */}
+          <button
+            onClick={goToPrevious}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 text-orange-500 hover:text-orange-600 transition-all duration-300 transform hover:scale-110"
+            aria-label="Previous testimonials"
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+
+          {/* Right chevron */}
+          <button
+            onClick={goToNext}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 text-orange-500 hover:text-orange-600 transition-all duration-300 transform hover:scale-110"
+            aria-label="Next testimonials"
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
+
+          {/* Testimonials content */}
+          <div 
+            ref={carouselRef}
+            className={`max-w-6xl mx-auto ${getAnimationClasses(carouselVisible, 'fadeUp')}`}
+          >
+
+          {/* Mobile - 1 card */}
+          <div className="block md:hidden">
+            <div className="grid grid-cols-1 gap-8">
+              {getVisibleTestimonials(1).map((testimonial, index) => (
+                <div
+                  key={`${currentIndex}-${index}`}
+                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  style={{ animationDelay: `${carouselVisible ? index * 100 : 0}ms` }}
+                >
+                  <div className="flex flex-col h-full">
+                    {/* Quote text */}
+                    <blockquote className="text-gray-700 leading-relaxed mb-4 flex-grow italic">
+                      "{testimonial.text}"
+                    </blockquote>
+                    
+                    {/* Footer with username and post link */}
+                    <div className="border-t border-gray-100 pt-4">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="font-semibold text-black text-sm">
+                            {testimonial.username}
+                          </p>
+                          <p className="text-xs text-gray-500 mt-1">
+                            {testimonial.postTitle}
+                          </p>
+                        </div>
+                        <a
+                          href={testimonial.postLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center w-8 h-8 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-200 flex-shrink-0"
+                          aria-label={`Read post: ${testimonial.postTitle}`}
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tablet - 2 cards */}
+          <div className="hidden md:block lg:hidden">
+            <div className="grid grid-cols-2 gap-8">
+              {getVisibleTestimonials(2).map((testimonial, index) => (
+                <div
+                  key={`${currentIndex}-${index}`}
+                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  style={{ animationDelay: `${carouselVisible ? index * 100 : 0}ms` }}
+                >
+                  <div className="flex flex-col h-full">
+                    {/* Quote text */}
+                    <blockquote className="text-gray-700 leading-relaxed mb-4 flex-grow italic">
+                      "{testimonial.text}"
+                    </blockquote>
+                    
+                    {/* Footer with username and post link */}
+                    <div className="border-t border-gray-100 pt-4">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="font-semibold text-black text-sm">
+                            {testimonial.username}
+                          </p>
+                          <p className="text-xs text-gray-500 mt-1">
+                            {testimonial.postTitle}
+                          </p>
+                        </div>
+                        <a
+                          href={testimonial.postLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center w-8 h-8 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors duration-200 flex-shrink-0"
+                          aria-label={`Read post: ${testimonial.postTitle}`}
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop - 3 cards */}
+          <div className="hidden lg:block">
+            <div className="grid grid-cols-3 gap-8">
+            {getVisibleTestimonials(3).map((testimonial, index) => (
               <div
                 key={`${currentIndex}-${index}`}
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
@@ -135,6 +257,7 @@ const Testimonials = () => {
                 </div>
               </div>
             ))}
+            </div>
           </div>
           
           {/* Carousel indicators */}
@@ -151,6 +274,7 @@ const Testimonials = () => {
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
+          </div>
           </div>
         </div>
       </div>

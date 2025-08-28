@@ -23,13 +23,6 @@ const SocialLinks = () => {
       color: 'bg-black hover:bg-gray-800'
     },
     {
-      name: 'LinkedIn',
-      icon: SiLinkedin,
-      url: 'https://www.linkedin.com/in/serenakp/',
-      description: 'Professional network',
-      color: 'bg-blue-600 hover:bg-blue-700'
-    },
-    {
       name: 'Instagram',
       icon: SiInstagram,
       url: 'https://www.instagram.com/science.with.serena/',
@@ -66,7 +59,7 @@ const SocialLinks = () => {
         
         <div 
           ref={gridRef}
-          className={`grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-6xl mx-auto ${getAnimationClasses(gridVisible, 'fadeUp')}`}
+          className={`grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8 max-w-6xl mx-auto ${getAnimationClasses(gridVisible, 'fadeUp')}`}
         >
           {socialLinks.map((link, index) => (
             <a
