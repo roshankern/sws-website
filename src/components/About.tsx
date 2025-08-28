@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { Atom, Users, Lightbulb, Target } from 'lucide-react';
 import { useScrollAnimation, getAnimationClasses } from '@/hooks/use-scroll-animation';
 
@@ -85,8 +84,18 @@ const About = () => {
                 </p>
 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Science with Serena brought back the joy of learning for me and I hope it offers the same to you.
+                  Science with Serena brought back the joy of learning for me and I hope it offers the same to you!
                 </p>
+                
+                {/* Email button */}
+                <div className="flex justify-center mt-8">
+                  <a
+                    href="mailto:serena@sciencewithserena.com"
+                    className="inline-block bg-black text-white font-semibold py-4 px-8 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                  >
+                    Email Me
+                  </a>
+                </div>
               </div>
             </div>
           </div>
