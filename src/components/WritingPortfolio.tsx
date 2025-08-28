@@ -126,7 +126,7 @@ const WritingPortfolio = () => {
     <section 
       id="writing" 
       ref={sectionRef}
-      className={`py-10 ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
+      className={`py-14 ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
     >
       <div className="container mx-auto px-6">
         <div 

@@ -107,7 +107,7 @@ const Testimonials = () => {
     <section 
       id="testimonials" 
       ref={sectionRef}
-      className={`py-10 ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
+      className={`py-14 ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
     >
       <div className="container mx-auto px-6">
         <h2 

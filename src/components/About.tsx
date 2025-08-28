@@ -10,7 +10,7 @@ const About = () => {
     <section 
       id="about" 
       ref={sectionRef}
-      className={`py-10 bg-white ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
+      className={`py-14 bg-white ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
     >
       <div className="container mx-auto px-10">
         <div className="max-w-6xl mx-auto">
