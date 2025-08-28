@@ -49,7 +49,7 @@ const SocialLinks = () => {
     <section 
       id="connect" 
       ref={sectionRef}
-      className={`py-20 bg-white ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
+      className={`py-10 bg-white ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
     >
       <div className="container mx-auto px-6">
         <div 
