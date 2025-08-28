@@ -10,22 +10,22 @@ const About = () => {
     <section 
       id="about" 
       ref={sectionRef}
-      className={`py-20 bg-white ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
+      className={`py-10 bg-white ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
     >
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Main About Section */}
-          <div className="text-center mb-16">
+          <div className="text-center">
             <h2 
               ref={titleRef}
-              className={`text-4xl md:text-5xl font-bold text-black mb-16 ${getAnimationClasses(titleVisible, 'fadeUp')}`}
+              className={`text-4xl md:text-5xl font-bold text-black ${getAnimationClasses(titleVisible, 'fadeUp')}`}
             >
               About <span className="text-orange-500">Serena</span>
             </h2>
             
             <div 
               ref={contentRef}
-              className={`text-center mb-12 ${getAnimationClasses(contentVisible, 'fadeUp')}`}
+              className={`text-center ${getAnimationClasses(contentVisible, 'fadeUp')}`}
             >
               {/* Image first */}
               <div className="flex justify-center mb-12">

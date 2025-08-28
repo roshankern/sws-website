@@ -20,8 +20,8 @@ const Index = () => {
       </div>
       
       <About />
-      <Mission />
       <SocialLinks />
+      <Mission />
       <WritingPortfolio />
       
       {/* Footer */}
