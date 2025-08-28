@@ -12,7 +12,7 @@ const About = () => {
       ref={sectionRef}
       className={`py-10 bg-white ${getAnimationClasses(sectionVisible, 'fadeIn')}`}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-10">
         <div className="max-w-6xl mx-auto">
           {/* Main About Section */}
           <div className="text-center">
@@ -28,9 +28,9 @@ const About = () => {
               className={`${getAnimationClasses(contentVisible, 'fadeUp')}`}
             >
               {/* Image and text layout */}
-              <div className="grid lg:grid-cols-2 gap-12 items-center mb-8">
-                {/* Image on left */}
-                <div className="flex justify-center lg:justify-start">
+              <div className="grid lg:grid-cols-5 gap-12 items-center mb-8">
+                {/* Image on left - takes 2/5 of space (40%) */}
+                <div className="lg:col-span-2 flex justify-center">
                   <div className="relative">
                     <img 
                       src="/images/ba8eea36-a176-41f6-af05-a35d97496170.png" 
@@ -42,11 +42,8 @@ const About = () => {
                   </div>
                 </div>
                 
-                {/* Text content on right */}
-                <div className="text-left space-y-6">
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    Hi! Welcome to Science with Serena. I'm Serena.
-                  </p>
+                {/* Text content on right - takes 3/5 of space (60%) */}
+                <div className="lg:col-span-3 text-left space-y-6">
 
                   <p className="text-lg text-gray-700 leading-relaxed">
                     I'm a masters student at the University of Barcelona studying theoretical and computational chemistry as a part of the Erasmus Mundus scholarship program. Before, I was at Case Western Reserve University in Cleveland where I got my B.S. in Chemistry and minored in physics. Now, I'm a Science Communication Fellow for the International Year of Quantum 2025.
