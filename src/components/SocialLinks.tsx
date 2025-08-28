@@ -1,6 +1,5 @@
-import { SiSubstack, SiLinkedin, SiInstagram } from 'react-icons/si';
+import { SiSubstack, SiLinkedin, SiInstagram, SiBluesky } from 'react-icons/si';
 import { FaMediumM } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
 import { useScrollAnimation, getAnimationClasses } from '@/hooks/use-scroll-animation';
 
 const SocialLinks = () => {
@@ -38,11 +37,11 @@ const SocialLinks = () => {
       color: 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
     },
     {
-      name: 'Email',
-      icon: MdEmail,
-      url: 'mailto:serena@sciencewithserena.com',
-      description: 'Get in touch',
-      color: 'bg-green-600 hover:bg-green-700'
+      name: 'Bluesky',
+      icon: SiBluesky,
+      url: 'https://bsky.app/profile/sciencewithserena.bsky.social',
+      description: 'Join me on Bluesky',
+      color: 'bg-sky-500 hover:bg-sky-600'
     },
   ];
 

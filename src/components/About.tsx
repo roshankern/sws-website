@@ -51,29 +51,41 @@ const About = () => {
             
             <div 
               ref={contentRef}
-              className={`grid md:grid-cols-2 gap-12 items-center mb-12 ${getAnimationClasses(contentVisible, 'fadeUp')}`}
+              className={`text-center mb-12 ${getAnimationClasses(contentVisible, 'fadeUp')}`}
             >
-              <div className="relative">
-                <img 
-                  src="/images/ba8eea36-a176-41f6-af05-a35d97496170.png" 
-                  alt="Serena with quantum illustration" 
-                  className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
-                />
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-orange-500 rounded-full opacity-20 animate-pulse"></div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-orange-300 rounded-full opacity-30 animate-pulse" style={{animationDelay: '1s'}}></div>
+              {/* Image first */}
+              <div className="flex justify-center mb-12">
+                <div className="relative">
+                  <img 
+                    src="/images/ba8eea36-a176-41f6-af05-a35d97496170.png" 
+                    alt="Serena with quantum illustration" 
+                    className="w-full max-w-md rounded-2xl shadow-2xl"
+                  />
+                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-orange-500 rounded-full opacity-20 animate-pulse"></div>
+                  <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-orange-300 rounded-full opacity-30 animate-pulse" style={{animationDelay: '1s'}}></div>
+                </div>
               </div>
               
-              <div className="text-left">
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Hi! I'm Serena, a quantum physicist turned science communicator with a passion for making the impossible seem possible. 
-                </p>
-                
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  With a background in quantum computing and chemistry, I've spent years diving deep into the quantum realm. Now, I'm dedicated to bringing these mind-bending concepts to everyone – from curious students to seasoned professionals looking to understand quantum's impact on their field.
-                </p>
-                
+              {/* Text content below */}
+              <div className="max-w-3xl mx-auto text-left space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  My mission is simple: transform the complex world of quantum science into engaging, accessible stories that inspire wonder and understanding. Because the quantum future belongs to all of us.
+                  Hi! Welcome to Science with Serena. I'm Serena.
+                </p>
+
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  I'm a masters student at the University of Barcelona studying theoretical and computational chemistry as a part of the Erasmus Mundus scholarship program. Before, I was at Case Western Reserve University in Cleveland where I got my B.S. in Chemistry and minored in physics. Now, I'm a Science Communication Fellow for the International Year of Quantum 2025.
+                </p>
+
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  I started Science with Serena because I wanted a breath of fresh science. Endless jargon, dense papers and muddled communication makes academia feel so stuffy. At the last quantum conference I attended I was listening to groundbreaking science thinking about when the next snack break would be. I love Quantum science, but I wanted to engage with it in a way that felt human. 
+                </p>
+
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  So I created a platform where I could put all the fun into science that I wanted. My newsletter the Quantum Notebook uses comics and cartoons to visualize complex science topics in a way that is approachable for everybody. My social networks give the behind the scenes look into my masters studies. 
+                </p>
+
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Science with Serena brought back the joy of learning for me and I hope it offers the same to you.
                 </p>
               </div>
             </div>
