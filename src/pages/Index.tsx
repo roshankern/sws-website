@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import SocialLinks from '@/components/SocialLinks';
 import WritingPortfolio from '@/components/WritingPortfolio';
 import About from '@/components/About';
+import Mission from '@/components/Mission';
 import { useScrollAnimation, getAnimationClasses } from '@/hooks/use-scroll-animation';
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
       </div>
       
       <About />
+      <Mission />
       <SocialLinks />
       <WritingPortfolio />
       

@@ -1,35 +1,10 @@
 
-import { BookOpen, Users, Sparkles, GraduationCap } from 'lucide-react';
 import { useScrollAnimation, getAnimationClasses } from '@/hooks/use-scroll-animation';
 
 const About = () => {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation<HTMLElement>({ delay: 100 });
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 200 });
   const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation<HTMLDivElement>({ delay: 300 });
-  const { ref: missionRef, isVisible: missionVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400 });
-
-  const mission = [
-    {
-      icon: BookOpen,
-      title: 'Making Quantum Science Fun',
-      description: 'Bringing science writing back to the basics: engaging storytelling, clear visuals, a human voice.'
-    },
-    {
-      icon: GraduationCap,
-      title: 'Bridging Academia and the Public',
-      description: 'Showing people the fun side of academic research and providing the tools to understand it.'
-    },
-    {
-      icon: Sparkles,
-      title: 'Inspiring Growth',
-      description: 'Creating a space for everyone to feel like a “science person”—even if they think they aren’t.'
-    },
-    {
-      icon: Users,
-      title: 'Building Community',
-      description: 'Connecting people with the joy of science!'
-    }
-  ];
 
   return (
     <section 
@@ -97,40 +72,6 @@ const About = () => {
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Mission Grid */}
-          <div 
-            ref={missionRef}
-            className={getAnimationClasses(missionVisible, 'fadeUp')}
-          >
-            <h3 className="text-3xl font-bold text-center text-black mb-12">
-              My <span className="text-orange-500">Mission</span>
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {mission.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 rounded-2xl p-8 hover:bg-orange-50 transition-all duration-300 transform hover:scale-105"
-                  style={{ animationDelay: `${missionVisible ? index * 100 : 0}ms` }}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="bg-orange-500 rounded-xl p-3 text-white">
-                      <item.icon className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-black mb-3">
-                        {item.title}
-                      </h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
