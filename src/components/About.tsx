@@ -62,7 +62,7 @@ const About = () => {
                 {/* Email Circle */}
                 <a
                   href="mailto:serena@sciencewithserena.com"
-                  className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-all duration-300 transform hover:scale-110 hover:shadow-xl"
+                  className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center hover:bg-orange-600 transition-all duration-300 transform hover:scale-110 hover:shadow-xl"
                   aria-label="Email Serena"
                 >
                   <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -70,11 +70,11 @@ const About = () => {
                   </svg>
                 </a>
 
-                {/* Instagram Circle */}
+                {/* Kenny Circle */}
                 <a
                   href="#"
-                  className="w-16 h-16 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 transform hover:shadow-xl"
-                  aria-label="Instagram"
+                  className="w-16 h-16 bg-transparent border-2 border-black rounded-full flex items-center justify-center hover:bg-gray-100 transition-all duration-300 transform hover:scale-110 hover:shadow-xl"
+                  aria-label="Kenny"
                 >
                   <img 
                     src="/images/small_kenny.png" 
