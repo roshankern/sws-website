@@ -33,7 +33,7 @@ const About = () => {
                 <div className="lg:col-span-2 flex justify-center">
                   <div className="relative">
                     <img 
-                      src="/images/serena.jpg" 
+                      src="/images/serena.webp" 
                       alt="Serena with quantum illustration" 
                       className="w-full max-w-md rounded-2xl shadow-2xl"
                     />
