@@ -43,9 +43,7 @@ const Header = () => {
           ref={descRef}
           className={`text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed ${getAnimationClasses(descVisible, 'fadeUp')}`}
         >
-          Making quantum science accessible and fun for everyone. 
-          <br />
-          Bridging the gap between complex quantum concepts and curious minds.
+          turning complex science into compelling stories for global audiences 
         </p>
       </div>
     </header>

@@ -1,4 +1,4 @@
-import { BookOpen, Users, Sparkles, GraduationCap } from 'lucide-react';
+import { MessageSquare, Target, Heart, Sparkles } from 'lucide-react';
 import { useScrollAnimation, getAnimationClasses } from '@/hooks/use-scroll-animation';
 
 const Mission = () => {
@@ -8,24 +8,24 @@ const Mission = () => {
 
   const mission = [
     {
-      icon: BookOpen,
-      title: 'Making Quantum Science Fun',
-      description: 'Bringing science writing back to the basics: engaging storytelling, clear visuals, a human voice.'
+      icon: MessageSquare,
+      title: 'Readable',
+      description: 'Writing in clear, approachable language that welcomes everyone in.'
     },
     {
-      icon: GraduationCap,
-      title: 'Bridging Academia and the Public',
-      description: 'Showing people the fun side of academic research and providing the tools to understand it.'
+      icon: Target,
+      title: 'Relevant',
+      description: 'Creating diverse content that addresses different audiences, experiences, and perspectives.'
+    },
+    {
+      icon: Heart,
+      title: 'Resonant',
+      description: 'Conveying what people actually care about - translating discoveries into stories.'
     },
     {
       icon: Sparkles,
-      title: 'Inspiring Growth',
-      description: 'Creating a space for everyone to feel like a "science person"—even if they think they aren\'t.'
-    },
-    {
-      icon: Users,
-      title: 'Building Community',
-      description: 'Connecting people with the joy of science!'
+      title: 'Fun',
+      description: 'Bringing back the fun and enjoyment science deserves.'
     }
   ];
 

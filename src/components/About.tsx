@@ -44,15 +44,27 @@ const About = () => {
                 <div className="lg:col-span-3 text-left space-y-6">
 
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    I'm a masters student at the University of Barcelona studying theoretical and computational chemistry as a part of the Erasmus Mundus scholarship program. Before, I was at Case Western Reserve University in Cleveland where I got my B.S. in Chemistry and minored in physics. Now, I'm a Science Communication Fellow for the International Year of Quantum 2025.
+                    Hi, I’m Serena.
                   </p>
 
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    I started Science with Serena because I wanted a breath of fresh science. Endless jargon, dense papers and muddled communication makes academia feel so stuffy. At the last quantum conference I attended I was listening to groundbreaking science thinking about when the next snack break would be. I love Quantum science, but I wanted to engage with it in a way that felt human. 
+                    I transform complex topics in quantum science, physics & chemistry into compelling stories for all audiences.
                   </p>
 
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Science with Serena brought back the joy of learning for me and I hope it offers the same to you!
+                    I write, illustrate, & create strategic scientific content to bridge the gap between research and the general public. You can find my work on my platform Science with Serena, where I publish my newsletter The Quantum Notebook, or in my role as Science Communication Fellow for the International Year of Quantum 2025, where I help make quantum science accessible for global audiences.
+                  </p>
+
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    I graduated from Case Western Reserve University with a B.S. in Chemistry and am currently pursuing my masters in Theoretical and Computational Chemistry in the Erasmus Mundus Joint Master Program in Barcelona.
+                  </p>
+
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    My mission is to revolutionize the way we communicate cutting-edge science. In this attention economy? Research shouldn’t just be readable, relevant, and resonant—it needs to be. I‘m hoping to get it there.
+                  </p>
+
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    If anything resonants with you, or you‘d just like to connect—feel free to email me!
                   </p>
                 </div>
               </div>
